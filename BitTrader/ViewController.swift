@@ -9,12 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
 
+    let dataFetcherService = DataFetcherService()
+    let dateConvert = DateConvert()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+
+//        dataFetcherService.fetchOrderBook { (orderBook) in
+//            print(orderBook)
+//        }
+        dataFetcherService.ticker { (ticker) in
+            let getDateString = ticker?.timestamp
+            let date = self.dateConvert.convertDate(dateString: getDateString)
+            print(date)
+        }
     }
-
-
 }
 

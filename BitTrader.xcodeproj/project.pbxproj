@@ -3,11 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4F1EC0A15F5C24E635D322A2 /* Pods_BitTrader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A8014364B7587EBC1476A3 /* Pods_BitTrader.framework */; };
+		6E4566DB24728236001C8D8C /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4566DA24728236001C8D8C /* Ticker.swift */; };
+		6E4566DD2472846B001C8D8C /* NetworkUrlSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4566DC2472846B001C8D8C /* NetworkUrlSession.swift */; };
+		6E4566E02472919D001C8D8C /* NetworkAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4566DF2472919D001C8D8C /* NetworkAlamofire.swift */; };
+		6E4566E2247294F5001C8D8C /* OrderBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4566E1247294F5001C8D8C /* OrderBook.swift */; };
+		6E4566E424729C65001C8D8C /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4566E324729C65001C8D8C /* Transaction.swift */; };
+		6E4566E624729E81001C8D8C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4566E524729E81001C8D8C /* NetworkService.swift */; };
+		6E4566E82472A12B001C8D8C /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4566E72472A12B001C8D8C /* NetworkDataFetcher.swift */; };
+		6E4566EA2472A611001C8D8C /* DataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4566E92472A611001C8D8C /* DataFetcherService.swift */; };
+		6E4566EC2472A9A8001C8D8C /* TradingPairInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4566EB2472A9A8001C8D8C /* TradingPairInfo.swift */; };
+		6E4566EE2472AB53001C8D8C /* ConversionRateEurUsd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4566ED2472AB53001C8D8C /* ConversionRateEurUsd.swift */; };
+		6E4566F12472B7F4001C8D8C /* DateConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4566F02472B7F4001C8D8C /* DateConvert.swift */; };
 		6E4884332461F12800ABD705 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4884322461F12800ABD705 /* AppDelegate.swift */; };
 		6E4884352461F12800ABD705 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4884342461F12800ABD705 /* SceneDelegate.swift */; };
 		6E4884372461F12800ABD705 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4884362461F12800ABD705 /* ViewController.swift */; };
@@ -19,6 +30,17 @@
 /* Begin PBXFileReference section */
 		43A8014364B7587EBC1476A3 /* Pods_BitTrader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitTrader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65A41C62961F0AC97BDCB8A6 /* Pods-BitTrader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitTrader.release.xcconfig"; path = "Target Support Files/Pods-BitTrader/Pods-BitTrader.release.xcconfig"; sourceTree = "<group>"; };
+		6E4566DA24728236001C8D8C /* Ticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker.swift; sourceTree = "<group>"; };
+		6E4566DC2472846B001C8D8C /* NetworkUrlSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUrlSession.swift; sourceTree = "<group>"; };
+		6E4566DF2472919D001C8D8C /* NetworkAlamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAlamofire.swift; sourceTree = "<group>"; };
+		6E4566E1247294F5001C8D8C /* OrderBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBook.swift; sourceTree = "<group>"; };
+		6E4566E324729C65001C8D8C /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		6E4566E524729E81001C8D8C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		6E4566E72472A12B001C8D8C /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
+		6E4566E92472A611001C8D8C /* DataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherService.swift; sourceTree = "<group>"; };
+		6E4566EB2472A9A8001C8D8C /* TradingPairInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingPairInfo.swift; sourceTree = "<group>"; };
+		6E4566ED2472AB53001C8D8C /* ConversionRateEurUsd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionRateEurUsd.swift; sourceTree = "<group>"; };
+		6E4566F02472B7F4001C8D8C /* DateConvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConvert.swift; sourceTree = "<group>"; };
 		6E48842F2461F12800ABD705 /* BitTrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitTrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E4884322461F12800ABD705 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E4884342461F12800ABD705 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,8 +70,41 @@
 				C9B4977E118D4B789D244AB2 /* Pods-BitTrader.debug.xcconfig */,
 				65A41C62961F0AC97BDCB8A6 /* Pods-BitTrader.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		6E4566D924728211001C8D8C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6E4566DE24728C46001C8D8C /* Models */,
+				6E4566EF2472ACD5001C8D8C /* For Delete */,
+				6E4566F02472B7F4001C8D8C /* DateConvert.swift */,
+				6E4566E524729E81001C8D8C /* NetworkService.swift */,
+				6E4566E72472A12B001C8D8C /* NetworkDataFetcher.swift */,
+				6E4566E92472A611001C8D8C /* DataFetcherService.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6E4566DE24728C46001C8D8C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6E4566DA24728236001C8D8C /* Ticker.swift */,
+				6E4566E1247294F5001C8D8C /* OrderBook.swift */,
+				6E4566E324729C65001C8D8C /* Transaction.swift */,
+				6E4566EB2472A9A8001C8D8C /* TradingPairInfo.swift */,
+				6E4566ED2472AB53001C8D8C /* ConversionRateEurUsd.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6E4566EF2472ACD5001C8D8C /* For Delete */ = {
+			isa = PBXGroup;
+			children = (
+				6E4566DC2472846B001C8D8C /* NetworkUrlSession.swift */,
+				6E4566DF2472919D001C8D8C /* NetworkAlamofire.swift */,
+			);
+			path = "For Delete";
 			sourceTree = "<group>";
 		};
 		6E4884262461F12800ABD705 = {
@@ -75,6 +130,7 @@
 			children = (
 				6E4884322461F12800ABD705 /* AppDelegate.swift */,
 				6E4884342461F12800ABD705 /* SceneDelegate.swift */,
+				6E4566D924728211001C8D8C /* Model */,
 				6E4884362461F12800ABD705 /* ViewController.swift */,
 				6E4884382461F12800ABD705 /* Main.storyboard */,
 				6E48843B2461F13000ABD705 /* Assets.xcassets */,
@@ -208,8 +264,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E4884372461F12800ABD705 /* ViewController.swift in Sources */,
+				6E4566DD2472846B001C8D8C /* NetworkUrlSession.swift in Sources */,
+				6E4566E424729C65001C8D8C /* Transaction.swift in Sources */,
+				6E4566EE2472AB53001C8D8C /* ConversionRateEurUsd.swift in Sources */,
+				6E4566DB24728236001C8D8C /* Ticker.swift in Sources */,
+				6E4566E82472A12B001C8D8C /* NetworkDataFetcher.swift in Sources */,
+				6E4566EA2472A611001C8D8C /* DataFetcherService.swift in Sources */,
+				6E4566F12472B7F4001C8D8C /* DateConvert.swift in Sources */,
+				6E4566E624729E81001C8D8C /* NetworkService.swift in Sources */,
+				6E4566E2247294F5001C8D8C /* OrderBook.swift in Sources */,
 				6E4884332461F12800ABD705 /* AppDelegate.swift in Sources */,
+				6E4566EC2472A9A8001C8D8C /* TradingPairInfo.swift in Sources */,
 				6E4884352461F12800ABD705 /* SceneDelegate.swift in Sources */,
+				6E4566E02472919D001C8D8C /* NetworkAlamofire.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
