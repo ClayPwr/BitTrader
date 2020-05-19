@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct OrderBook: Decodable {
+struct BSOrderBook: Decodable {
     
     let timestamp: String
     let microtimestamp: String

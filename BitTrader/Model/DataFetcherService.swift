@@ -27,7 +27,7 @@ class DataFetcherService{
         networkDataFetcher.fetchGenericJSONData(urlString: orderBookUrl, responseDecoded: completion)
     }
     
-    func tradePairInfo(completion: @escaping (TradingPairInfo?) -> Void){
+    func tradePairInfo(completion: @escaping (TradingPair?) -> Void){
         networkDataFetcher.fetchGenericJSONData(urlString: tradingPairInfo, responseDecoded: completion)
     }
     

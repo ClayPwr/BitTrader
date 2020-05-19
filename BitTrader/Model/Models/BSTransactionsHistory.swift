@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Transaction: Decodable {
+struct BSTransactionsHistory: Decodable {
     
     let date: String
     let tid: Int

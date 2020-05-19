@@ -8,7 +8,9 @@
 
 import Foundation
 
-struct Ticker: Decodable{
+// Bitstamp - BS
+
+struct BSTicker: Decodable{
     
     //Last 24 hours price high.
     let high: String
@@ -28,6 +30,17 @@ struct Ticker: Decodable{
     let ask: String
     //First price of the day.
     let open: Double
+    
+    
+    func calculatedPercentage() -> Double {
+        //
+        //
+        let lastValue = Double(self.last)
+        let openValue = self.open
+        
+        // calculate percentage:
+        return 0.15
+    }
 }
 
 

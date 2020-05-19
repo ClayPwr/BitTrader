@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct TradingPairInfo: Decodable {
+struct BSTradingPair: Decodable {
     
     let base_decimals: Int
     let minimum_order: String
