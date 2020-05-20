@@ -11,11 +11,11 @@ import Foundation
 
 class Services {
 
-//    let bitstampExchangeProvider: ExchangeProvider
-    
+    let bitstampExchangeProvider: ExchangeProvider
+    let dateConvert: DateConvert
     private init() {
-        
-//        self.bitstampExchangeProvider =
+        self.dateConvert = DateConvert()
+        self.bitstampExchangeProvider = BitstampExchangeProvider()
     }
     
     static let all = Services()

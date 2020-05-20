@@ -14,20 +14,23 @@ class DataFetcherService{
     let tradingPairInfo = "https://www.bitstamp.net/api/v2/trading-pairs-info/"
     let conversionRate = "https://www.bitstamp.net/api/eur_usd/"
     let hourlyUrlString = "https://www.bitstamp.net/api/ticker_hour/"
-    let tickerUrl = "https://www.bitstamp.net/api/ticker/"
+    let tickerUrl = "https://www.bitstamp.net/api/v2/ticker/"
+    
+    
+    //var partOfUrl = "btceur"
     
     let networkDataFetcher = NetworkDataFetcher()
     
     //надо что-то сделать с массивом
-    func fetchTransactions(completion: @escaping (Transaction?)-> Void){
+    func fetchTransactions(completion: @escaping (BSTransactionsHistory?)-> Void){
         networkDataFetcher.fetchGenericJSONData(urlString: transactions, responseDecoded: completion)
     }
     
-    func fetchOrderBook(completion: @escaping (OrderBook?)-> Void){
+    func fetchOrderBook(completion: @escaping (BSOrderBook?)-> Void){
         networkDataFetcher.fetchGenericJSONData(urlString: orderBookUrl, responseDecoded: completion)
     }
     
-    func tradePairInfo(completion: @escaping (TradingPair?) -> Void){
+    func tradePairInfo(completion: @escaping ([BSTradingPair]?) -> Void){
         networkDataFetcher.fetchGenericJSONData(urlString: tradingPairInfo, responseDecoded: completion)
     }
     
@@ -35,11 +38,14 @@ class DataFetcherService{
         networkDataFetcher.fetchGenericJSONData(urlString: conversionRate, responseDecoded: completion)
     }
     
-    func hourlyTicker(completion: @escaping (Ticker?) -> Void){
+    func hourlyTicker(completion: @escaping (BSTickerHourly?) -> Void){
         networkDataFetcher.fetchGenericJSONData(urlString: hourlyUrlString, responseDecoded: completion)
     }
     
-    func ticker(completion: @escaping (Ticker?) -> Void){
-        networkDataFetcher.fetchGenericJSONData(urlString: tickerUrl, responseDecoded: completion)
+    func ticker(partOfUrl: String, completion: @escaping (BSTicker?) -> Void){
+        
+        let validUrl = tickerUrl.appending(partOfUrl) + "/"
+
+        networkDataFetcher.fetchGenericJSONData(urlString: validUrl, responseDecoded: completion)
     }
 }

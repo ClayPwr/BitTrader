@@ -7,3 +7,35 @@
 //
 
 import Foundation
+
+class BitstampExchangeProvider: ExchangeProvider{
+    
+    let dataFetcher = DataFetcherService()
+    
+    func getTradingPairs(completion: @escaping ([BSTradingPair]?, Error?) -> (Void)) {
+        dataFetcher.tradePairInfo { (pairs) in
+            //нужны ли такие двойные проверки? такаяже проверка в контролере
+            if let pairses = pairs {
+                completion(pairses, nil)
+            }else{
+                
+                print("BitstampExchangeProvider got nil at getTradingPairs")
+                completion(nil, nil)
+            }
+        }
+    }
+    
+    func getTicker(for pair: BSTradingPair, completion: @escaping (BSTicker?, Error?) -> (Void)) {
+        dataFetcher.ticker(partOfUrl: pair.url_symbol) { (ticker) in
+            if let tickere = ticker {
+                completion(tickere, nil)
+            }else{
+                
+                print("BitstampExchangeProvider got nil at getTicker")
+                completion(nil, nil)
+            }
+        }
+    }
+    
+    
+}

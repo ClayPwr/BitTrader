@@ -29,17 +29,29 @@ struct BSTicker: Decodable{
     //Lowest sell order.
     let ask: String
     //First price of the day.
-    let open: Double
+    let open: String
     
     
     func calculatedPercentage() -> Double {
-        //
-        //
-        let lastValue = Double(self.last)
-        let openValue = self.open
-        
-        // calculate percentage:
-        return 0.15
+        if let lastValue = Double(self.last), let openValue = Double(self.open) {
+            //let openValue = Double(self.open)
+            let different = openValue - lastValue
+            let getNumer = (different / openValue) * 100
+            let roundedNumber = Double(round(1000*getNumer)/1000)
+            return roundedNumber
+        }else{
+            return 0.0
+        }
+    }
+    
+    func roundedNumber() -> String {
+        if let lastPrice = Double(self.last) {
+            let roundedNumber = Double(round(1000*lastPrice)/1000)
+            let toString = String(roundedNumber)
+            return toString
+        }else{
+            return last
+        }
     }
 }
 

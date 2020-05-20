@@ -15,8 +15,8 @@ typealias BSTickerResult = (BSTicker?, Error?) -> (Void)
 protocol ExchangeProvider {
 
     // Trading Pairs
-    func getTradingPairs(completion: BSTradingPairResult) -> Void
+    func getTradingPairs(completion: @escaping BSTradingPairResult) -> Void
     
     // Ticker info per Trading Pair:
-    func getTicker(for pair: BSTradingPair, completion: BSTickerResult) -> Void
+    func getTicker(for pair: BSTradingPair, completion: @escaping BSTickerResult) -> Void
 }

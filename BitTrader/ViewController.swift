@@ -15,18 +15,18 @@ class ViewController: UIViewController {
     let dataFetcherService = DataFetcherService()
     let dateConvert = DateConvert()
     
-    let exchangeProvider: ExchangeProvider = Services.all.bitstampExchangeProvider
+  // let exchangeProvider: ExchangeProvider = Services.all.bitstampExchangeProvider
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        self.exchangeProvider.getTradingPairs { (pairs, error) -> (Void) in
-            
-            if let pairs = pairs {
-                
-            }
-        }
+//        self.exchangeProvider.getTradingPairs { (pairs, error) -> (Void) in
+//            
+//            if let pairs = pairs {
+//                
+//            }
+//        }
         
 //        Services.all.bitstampExchangeProvider
         

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class TradingPairListModel {
     
@@ -17,11 +18,15 @@ class TradingPairListModel {
     }
     
     var currentValue: String {
-        return ticker.last
+        return ticker.roundedNumber()
     }
     
     var percentValue: String {
-        return String(ticker.calculatedPercentage())
+        return String(ticker.calculatedPercentage()) + " %"
+    }
+    
+    var urlSymbol: String {
+        return pair.url_symbol
     }
     
     
@@ -31,5 +36,15 @@ class TradingPairListModel {
     public init(pair: BSTradingPair, ticker: BSTicker) {
         self.pair = pair
         self.ticker = ticker
+    }
+    
+    //Где нужно было размещать данный метод? чтоб не импортировать сюда UIKit
+    func choiseColorForView() -> UIColor {
+        let percent = ticker.calculatedPercentage()
+        if percent > 0 {
+            return UIColor.green
+        }else {
+            return UIColor.red
+        }
     }
 }

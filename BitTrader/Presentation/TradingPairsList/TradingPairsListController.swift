@@ -9,45 +9,49 @@
 import UIKit
 
 class TradingPairsListController: UIViewController {
-
-    var exchangeProvider: ExchangeProvider!
+    //как правильно инициализировать exchangeProvider?
+    //var exchangeProvider: ExchangeProvider!
+    //let exchangeProvider = BitstampExchangeProvider()
+    let serviceBitstampExcProv = Services.all.bitstampExchangeProvider
     
     var rows: [TradingPairListModel] = []
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        // Do any additional setup after loading the view.
-        self.exchangeProvider.getTradingPairs { (pairs, error) -> (Void) in
-            if let pairs = pairs {
+        serviceBitstampExcProv.getTradingPairs { (pairs, error) -> (Void) in
+            guard let pairs = pairs else { return }
+            
+            for pair in pairs {
                 
-                for pair in pairs {
-                    self.exchangeProvider.getTicker(for: pair) { (ticker, error) -> (Void) in
-                        
-                        if let ticker = ticker {
-                            let row =  TradingPairListModel(pair: pair, ticker: ticker)
-                            self.rows.append(row)
-                        }
-                        
-                        //
-//                        self.tableView.reloadData()
-                    }
+                self.serviceBitstampExcProv.getTicker(for: pair) { (ticker, error) -> (Void) in
+                    guard let ticker = ticker else { return }
+                    let row = TradingPairListModel(pair: pair, ticker: ticker)
+                    self.rows.append(row)
+                    self.tableView.reloadData()
                 }
             }
         }
-        
+    }
+}
+
+extension TradingPairsListController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        rows.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TradingPairsTableViewCell
+        
+        cell.configure(from: rows[indexPath.row])
+        
+        return cell
     }
-    */
-
+    //если убрать метод то выдает constrait ошибок
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
 }
