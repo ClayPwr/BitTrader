@@ -37,5 +37,6 @@ class BitstampExchangeProvider: ExchangeProvider{
         }
     }
     
-    
+    //
+    //
 }

@@ -18,6 +18,7 @@ class TradingPairsListController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var timer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,15 +26,9 @@ class TradingPairsListController: UIViewController {
         serviceBitstampExcProv.getTradingPairs { (pairs, error) -> (Void) in
             guard let pairs = pairs else { return }
             
-            for pair in pairs {
-                
-                self.serviceBitstampExcProv.getTicker(for: pair) { (ticker, error) -> (Void) in
-                    guard let ticker = ticker else { return }
-                    let row = TradingPairListModel(pair: pair, ticker: ticker)
-                    self.rows.append(row)
-                    self.tableView.reloadData()
-                }
-            }
+            let rows = pairs.map({ TradingPairListModel(pair: $0, exchangeProvider: self.serviceBitstampExcProv) })
+            self.rows = rows
+            self.tableView.reloadData()
         }
     }
 }

@@ -19,4 +19,7 @@ protocol ExchangeProvider {
     
     // Ticker info per Trading Pair:
     func getTicker(for pair: BSTradingPair, completion: @escaping BSTickerResult) -> Void
+    
+    // Transactions:
+//    func getTransactions(for pair: BSTradingPair completion: ) -> <#return type#>
 }

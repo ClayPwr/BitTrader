@@ -13,6 +13,7 @@ class Services {
 
     let bitstampExchangeProvider: ExchangeProvider
     let dateConvert: DateConvert
+    
     private init() {
         self.dateConvert = DateConvert()
         self.bitstampExchangeProvider = BitstampExchangeProvider()

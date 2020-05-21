@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class DataFetcherService{
     let transactions = "https://www.bitstamp.net/api/transactions/"

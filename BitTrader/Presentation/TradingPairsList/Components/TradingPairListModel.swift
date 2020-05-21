@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+protocol TradingPairListModelDelegate: class {
+    func tickerDidChange(_ ticker: BSTicker) -> Void
+}
+
 class TradingPairListModel {
     
     var exchangeTitle: String  = "Bitstamp"
@@ -18,33 +22,53 @@ class TradingPairListModel {
     }
     
     var currentValue: String {
-        return ticker.roundedNumber()
+        return ticker?.roundedNumber() ?? ""
     }
     
     var percentValue: String {
-        return String(ticker.calculatedPercentage()) + " %"
+        if let percentage = ticker?.calculatedPercentage() {
+            return String(percentage) + " %"
+        }
+        return ""
+    }
+    
+    var rawPercentage: Double {
+        return ticker?.calculatedPercentage() ?? 0.0
     }
     
     var urlSymbol: String {
         return pair.url_symbol
     }
     
+    public weak var delegate: TradingPairListModelDelegate?
     
     private var pair: BSTradingPair
-    private var ticker: BSTicker
+    private var ticker: BSTicker?
     
-    public init(pair: BSTradingPair, ticker: BSTicker) {
+    private let exchangeProvider: ExchangeProvider
+    
+    var timer: Timer?
+    
+    public init(pair: BSTradingPair, exchangeProvider: ExchangeProvider) {
         self.pair = pair
-        self.ticker = ticker
-    }
-    
-    //Где нужно было размещать данный метод? чтоб не импортировать сюда UIKit
-    func choiseColorForView() -> UIColor {
-        let percent = ticker.calculatedPercentage()
-        if percent > 0 {
-            return UIColor.green
-        }else {
-            return UIColor.red
+        self.exchangeProvider = exchangeProvider
+        
+        self.exchangeProvider.getTicker(for: self.pair) { (ticker, error) -> (Void) in
+               if let ticker = ticker {
+                   self.ticker = ticker
+                   self.delegate?.tickerDidChange(ticker)
+               }
         }
+        
+        let timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { _ in
+            
+            self.exchangeProvider.getTicker(for: self.pair) { (ticker, error) -> (Void) in
+                if let ticker = ticker {
+                    self.ticker = ticker
+                    self.delegate?.tickerDidChange(ticker)
+                }
+            }
+        }
+        self.timer = timer
     }
 }
