@@ -9,6 +9,7 @@
 import Foundation
 
 class BitstampExchangeProvider: ExchangeProvider{
+
     
     let dataFetcher = DataFetcherService()
     
@@ -37,6 +38,15 @@ class BitstampExchangeProvider: ExchangeProvider{
         }
     }
     
-    //
-    //
+    func getTransactions(for pair: BSTradingPair, completion: @escaping BSTransactionResult) {
+        
+        dataFetcher.fetchTransactions(partOfUrl: pair.url_symbol) { (transactions) in
+            if let transactions = transactions {
+                completion(transactions, nil)
+            }else{
+                print("BitstampExchangeProvider got nil at getTransactions")
+                completion(nil, nil)
+            }
+        }
+    }
 }

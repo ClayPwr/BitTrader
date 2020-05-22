@@ -84,7 +84,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zXq-5w-deV">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zXq-5w-deV" customClass="LineChartView" customModule="Charts">
                                                     <rect key="frame" x="143" y="11" width="163" height="58"/>
                                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -115,6 +115,7 @@
                                             <outlet property="currencyLabel" destination="Xu7-A1-3en" id="Tt5-bP-OXe"/>
                                             <outlet property="currentValueLabel" destination="5uO-EQ-SMB" id="sAJ-az-iuT"/>
                                             <outlet property="exchangeLabel" destination="tQZ-Gh-UH9" id="2iV-vP-kZD"/>
+                                            <outlet property="lineChartView" destination="zXq-5w-deV" id="tOW-wQ-3zM"/>
                                             <outlet property="percentValueLabel" destination="hEv-TA-rHa" id="Aoz-La-njG"/>
                                             <outlet property="percentView" destination="mHf-tn-bE6" id="MdP-b6-ZUc"/>
                                         </connections>
@@ -138,11 +139,43 @@
                     <navigationItem key="navigationItem" title="BitTrader" id="Rsj-iZ-y9Y"/>
                     <connections>
                         <outlet property="tableView" destination="Xn3-mc-k6U" id="9vL-Ci-MsG"/>
+                        <segue destination="T5T-86-2IK" kind="show" identifier="DetailVC" id="Vjl-kP-oJf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="106.47321428571428"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="pNG-Vm-RRj">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="T5T-86-2IK" customClass="DetailViewController" customModule="BitTrader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gzn-K7-IDi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3gN-IB-dCx" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="144" width="414" height="752"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3gN-IB-dCx" firstAttribute="leading" secondItem="6KW-RO-lPb" secondAttribute="leading" id="Neu-hI-6Is"/>
+                            <constraint firstItem="3gN-IB-dCx" firstAttribute="top" secondItem="6KW-RO-lPb" secondAttribute="top" constant="56" id="W6Y-x3-xuJ"/>
+                            <constraint firstItem="3gN-IB-dCx" firstAttribute="trailing" secondItem="6KW-RO-lPb" secondAttribute="trailing" id="iA6-jY-vXU"/>
+                            <constraint firstAttribute="bottom" secondItem="3gN-IB-dCx" secondAttribute="bottom" id="shX-hd-gRO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6KW-RO-lPb"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2yf-Ty-THT"/>
+                    <connections>
+                        <outlet property="lineChartView" destination="3gN-IB-dCx" id="cYA-C6-Z8L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xNX-Pc-YUw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1976.8115942028987" y="106.47321428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tOF-nD-gwY">

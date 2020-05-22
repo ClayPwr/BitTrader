@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Charts
 
 class TradingPairsListController: UIViewController {
     //как правильно инициализировать exchangeProvider?
@@ -49,4 +50,34 @@ extension TradingPairsListController: UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //let indexPath = tableView.indexPathForSelectedRow
+        //tableView.deselectRow(at: indexPath, animated: true)
+        
+        
+        performSegue(withIdentifier: "DetailVC", sender: nil)
+//        print("You selected cell \(indexPath.row)")
+//        let indexRow = rows[indexPath.row]
+//
+//        indexRow.getTransactionData(pairList: indexRow) { transactions in
+//
+//        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        let indexRow = rows[indexPath.row]
+        let detailVC = segue.destination as! DetailViewController
+        indexRow.getTransactionData(pairList: indexRow) { transactions in
+            //print(transactions)
+            detailVC.transactionData = transactions
+        }
+        
+        
+    }
+    
+    
+    
+    
 }

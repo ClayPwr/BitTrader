@@ -19,6 +19,7 @@
 		6E4566F12472B7F4001C8D8C /* DateConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4566F02472B7F4001C8D8C /* DateConvert.swift */; };
 		6E456726247410E9001C8D8C /* BSTickerHourly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E456725247410E9001C8D8C /* BSTickerHourly.swift */; };
 		6E45672824752899001C8D8C /* TradingPairsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E45672724752899001C8D8C /* TradingPairsTableViewCell.swift */; };
+		6E45674C2476A031001C8D8C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E45674B2476A031001C8D8C /* DetailViewController.swift */; };
 		6E4884332461F12800ABD705 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4884322461F12800ABD705 /* AppDelegate.swift */; };
 		6E4884352461F12800ABD705 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4884342461F12800ABD705 /* SceneDelegate.swift */; };
 		6E4884372461F12800ABD705 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4884362461F12800ABD705 /* ViewController.swift */; };
@@ -47,6 +48,7 @@
 		6E4566F02472B7F4001C8D8C /* DateConvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConvert.swift; sourceTree = "<group>"; };
 		6E456725247410E9001C8D8C /* BSTickerHourly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSTickerHourly.swift; sourceTree = "<group>"; };
 		6E45672724752899001C8D8C /* TradingPairsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingPairsTableViewCell.swift; sourceTree = "<group>"; };
+		6E45674B2476A031001C8D8C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		6E48842F2461F12800ABD705 /* BitTrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitTrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E4884322461F12800ABD705 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E4884342461F12800ABD705 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				CEA0FE892473D37100B8D191 /* Components */,
 				CEA0FE872473D31A00B8D191 /* TradingPairsListController.swift */,
 				6E45672724752899001C8D8C /* TradingPairsTableViewCell.swift */,
+				6E45674B2476A031001C8D8C /* DetailViewController.swift */,
 			);
 			path = TradingPairsList;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				CEA0FE8B2473D39000B8D191 /* TradingPairListModel.swift in Sources */,
 				6E4566E424729C65001C8D8C /* BSTransactionsHistory.swift in Sources */,
 				6E4566EE2472AB53001C8D8C /* ConversionRateEurUsd.swift in Sources */,
+				6E45674C2476A031001C8D8C /* DetailViewController.swift in Sources */,
 				6E4566DB24728236001C8D8C /* BSTicker.swift in Sources */,
 				CEA0FE822473D0A900B8D191 /* BitstampExchangeProvider.swift in Sources */,
 				6E4566E82472A12B001C8D8C /* NetworkDataFetcher.swift in Sources */,

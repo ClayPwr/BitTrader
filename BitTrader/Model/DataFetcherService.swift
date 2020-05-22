@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 class DataFetcherService{
-    let transactions = "https://www.bitstamp.net/api/transactions/"
+    let transactions = "https://www.bitstamp.net/api/v2/transactions/"
     let orderBookUrl = "https://www.bitstamp.net/api/order_book/"
     let tradingPairInfo = "https://www.bitstamp.net/api/v2/trading-pairs-info/"
     let conversionRate = "https://www.bitstamp.net/api/eur_usd/"
@@ -23,8 +23,11 @@ class DataFetcherService{
     let networkDataFetcher = NetworkDataFetcher()
     
     //надо что-то сделать с массивом
-    func fetchTransactions(completion: @escaping (BSTransactionsHistory?)-> Void){
-        networkDataFetcher.fetchGenericJSONData(urlString: transactions, responseDecoded: completion)
+    func fetchTransactions(partOfUrl: String, completion: @escaping ([BSTransactionsHistory]?)-> Void){
+        
+        let validUrl = transactions.appending(partOfUrl) + "/"
+        
+        networkDataFetcher.fetchGenericJSONData(urlString: validUrl, responseDecoded: completion)
     }
     
     func fetchOrderBook(completion: @escaping (BSOrderBook?)-> Void){

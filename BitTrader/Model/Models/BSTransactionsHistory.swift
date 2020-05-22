@@ -11,8 +11,8 @@ import Foundation
 struct BSTransactionsHistory: Decodable {
     
     let date: String
-    let tid: Int
+    let tid: String
     let price: String
-    let type: Int
+    let type: String
     let amount: String
 }
