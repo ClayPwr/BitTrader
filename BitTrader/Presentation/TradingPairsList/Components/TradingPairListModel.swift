@@ -12,6 +12,7 @@ import Charts
 
 protocol TradingPairListModelDelegate: class {
     func tickerDidChange(_ ticker: BSTicker) -> Void
+    func didUpdateTransactionsHistory(_ history: [ChartDataEntry]) -> Void
 }
 
 class TradingPairListModel {
@@ -95,22 +96,20 @@ class TradingPairListModel {
         self.timer = timer
     }
     
-    func getTransactionData(pairList: TradingPairListModel, completion: @escaping ([ChartDataEntry])->Void){
-        var transactionsValues = [ChartDataEntry]()
+    func getTransactionData(pairList: TradingPairListModel) {
         let pair = pairList.pair
         exchangeProvider.getTransactions(for: pair) { (transactions, error) in
-            if let transactions = transactions {
-                self.transactions = transactions
-                //print(transactions)
-                for transaction in transactions.reversed() {
-                    if let date = Double(transaction.date), let price = Double(transaction.price){
-                        let value = ChartDataEntry(x: date, y: price)
-                        transactionsValues.append(value)
 
-                    }
-                }
-                completion(transactionsValues)
-            }
+            // filter items
+            // sort items
+            // transform from BSTransactionsHistory to ChartDataEntry
+            
+//              self.delegate?.didUpdateTransactionsHistory(finalData)
+            
         }
+    }
+    
+    public func getPair() -> BSTradingPair {
+        return self.pair
     }
 }

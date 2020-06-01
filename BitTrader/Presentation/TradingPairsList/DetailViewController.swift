@@ -11,9 +11,14 @@ import Charts
 
 class DetailViewController: UIViewController {
     
-    var tradingPairListModel: TradingPairListModel!
+//    var tradingPairListModel: TradingPairListModel!
+    
+    var bitstampProvider: ExchangeProvider = Services.all.bitstampExchangeProvider
+    
+    var pair: BSTradingPair!
     
     @IBOutlet weak var lineChartView: LineChartView!
+    @IBOutlet weak var indicatorView: UIActivityIndicatorView!
     
     //var numbers = [Double]()
     var transactionData = [ChartDataEntry]()
@@ -21,14 +26,33 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.indicatorView.startAnimating()
         
-        
+        // request :
+        self.bitstampProvider.getTransactions(for: self.pair) { (history, error) in
+            //
+            self.indicatorView.stopAnimating()
+            
+            guard let history = history else { return }
+            
+            var filtered = [BSTransactionsHistory]()
+            for (index, transaaction) in history.enumerated() {
+                if index == 0 || index % 11 == 0 {
+                    filtered.append(transaaction)
+                }
+            }
+            
+            let data = filtered.reversed().compactMap { transaction -> ChartDataEntry? in
+                if let timestamp = Double(transaction.date), let price = Double(transaction.price){
+                    return ChartDataEntry(x: Date.dateFromTimestamp(tmstp: timestamp).getMinutes(), y: price)
+                }
+                return nil
+            }
+            self.transactionData = data
+            self.setData()
+        }
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        setData()
-    }
+
     
     func setData() {
         customizelineChartView()
@@ -36,10 +60,10 @@ class DetailViewController: UIViewController {
 
         set1.drawCirclesEnabled = false
         set1.mode = .cubicBezier
-        set1.lineWidth = 3
+        set1.lineWidth = 2
         set1.setColor(.systemGreen)
         set1.fill = Fill(color: .systemGreen)
-        set1.fillAlpha = 0.7
+        set1.fillAlpha = 0.5
         set1.drawFilledEnabled = true
         set1.drawHorizontalHighlightIndicatorEnabled = false
         

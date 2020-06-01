@@ -57,9 +57,11 @@ class TradingPairsTableViewCell: UITableViewCell, TradingPairListModelDelegate {
         percentView.backgroundColor = self.choiseColorForView(percentage: self.model.rawPercentage)
     }
     
-    
-
-    
+    func didUpdateTransactionsHistory(_ history: [ChartDataEntry]) {
+          //
+        //impl
+        self.setData(history)
+    }
 }
 
 extension TradingPairsTableViewCell{

@@ -158,9 +158,15 @@
                                 <rect key="frame" x="0.0" y="144" width="414" height="752"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="TBv-LZ-yq4">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                                <color key="color" red="0.95258962560000005" green="0.95258962560000005" blue="0.95258962560000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="TBv-LZ-yq4" firstAttribute="centerY" secondItem="6KW-RO-lPb" secondAttribute="centerY" id="4Ff-fG-b6Z"/>
+                            <constraint firstItem="TBv-LZ-yq4" firstAttribute="centerX" secondItem="6KW-RO-lPb" secondAttribute="centerX" id="FbD-uk-4Nc"/>
                             <constraint firstItem="3gN-IB-dCx" firstAttribute="leading" secondItem="6KW-RO-lPb" secondAttribute="leading" id="Neu-hI-6Is"/>
                             <constraint firstItem="3gN-IB-dCx" firstAttribute="top" secondItem="6KW-RO-lPb" secondAttribute="top" constant="56" id="W6Y-x3-xuJ"/>
                             <constraint firstItem="3gN-IB-dCx" firstAttribute="trailing" secondItem="6KW-RO-lPb" secondAttribute="trailing" id="iA6-jY-vXU"/>
@@ -170,6 +176,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="2yf-Ty-THT"/>
                     <connections>
+                        <outlet property="indicatorView" destination="TBv-LZ-yq4" id="vvS-iX-BLP"/>
                         <outlet property="lineChartView" destination="3gN-IB-dCx" id="cYA-C6-Z8L"/>
                     </connections>
                 </viewController>

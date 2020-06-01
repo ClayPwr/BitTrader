@@ -26,6 +26,7 @@
 		6E48843A2461F12800ABD705 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E4884382461F12800ABD705 /* Main.storyboard */; };
 		6E48843C2461F13000ABD705 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E48843B2461F13000ABD705 /* Assets.xcassets */; };
 		6E48843F2461F13000ABD705 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E48843D2461F13000ABD705 /* LaunchScreen.storyboard */; };
+		CE276D8A247D09A6009E09D7 /* Date+TIme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE276D89247D09A6009E09D7 /* Date+TIme.swift */; };
 		CEA0FE7C2473CCF300B8D191 /* BSExchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0FE7B2473CCF300B8D191 /* BSExchange.swift */; };
 		CEA0FE7F2473CF2800B8D191 /* ExchangeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0FE7E2473CF2800B8D191 /* ExchangeProvider.swift */; };
 		CEA0FE822473D0A900B8D191 /* BitstampExchangeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0FE812473D0A900B8D191 /* BitstampExchangeProvider.swift */; };
@@ -58,6 +59,7 @@
 		6E48843E2461F13000ABD705 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E4884402461F13000ABD705 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9B4977E118D4B789D244AB2 /* Pods-BitTrader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitTrader.debug.xcconfig"; path = "Target Support Files/Pods-BitTrader/Pods-BitTrader.debug.xcconfig"; sourceTree = "<group>"; };
+		CE276D89247D09A6009E09D7 /* Date+TIme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+TIme.swift"; sourceTree = "<group>"; };
 		CEA0FE7B2473CCF300B8D191 /* BSExchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSExchange.swift; sourceTree = "<group>"; };
 		CEA0FE7E2473CF2800B8D191 /* ExchangeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeProvider.swift; sourceTree = "<group>"; };
 		CEA0FE812473D0A900B8D191 /* BitstampExchangeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitstampExchangeProvider.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				6E4884342461F12800ABD705 /* SceneDelegate.swift */,
 				6E4566D924728211001C8D8C /* Model */,
 				6E4884362461F12800ABD705 /* ViewController.swift */,
+				CE276D88247D098B009E09D7 /* Utils */,
 				CEA0FE852473D2E900B8D191 /* Presentation */,
 				6E4884382461F12800ABD705 /* Main.storyboard */,
 				6E48843B2461F13000ABD705 /* Assets.xcassets */,
@@ -154,6 +157,14 @@
 				43A8014364B7587EBC1476A3 /* Pods_BitTrader.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE276D88247D098B009E09D7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CE276D89247D09A6009E09D7 /* Date+TIme.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		CEA0FE7D2473CF1100B8D191 /* Services */ = {
@@ -334,6 +345,7 @@
 				6E4566E2247294F5001C8D8C /* BSOrderBook.swift in Sources */,
 				6E4884332461F12800ABD705 /* AppDelegate.swift in Sources */,
 				6E4566EC2472A9A8001C8D8C /* BSTradingPair.swift in Sources */,
+				CE276D8A247D09A6009E09D7 /* Date+TIme.swift in Sources */,
 				6E45672824752899001C8D8C /* TradingPairsTableViewCell.swift in Sources */,
 				6E4884352461F12800ABD705 /* SceneDelegate.swift in Sources */,
 				CEA0FE7F2473CF2800B8D191 /* ExchangeProvider.swift in Sources */,
