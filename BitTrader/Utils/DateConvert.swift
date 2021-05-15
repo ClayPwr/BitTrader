@@ -11,7 +11,7 @@ import Foundation
 class DateConvert {
     
     
-    func convertDate(dateString: String?)-> String{
+    func convertDate(dateString: String?)-> String {
         
         if let timeResult = (dateString as NSString?)?.doubleValue {
             let date = Date(timeIntervalSince1970: timeResult)

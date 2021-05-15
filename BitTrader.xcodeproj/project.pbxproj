@@ -94,10 +94,7 @@
 			children = (
 				CEA0FE7D2473CF1100B8D191 /* Services */,
 				6E4566DE24728C46001C8D8C /* Models */,
-				6E4566F02472B7F4001C8D8C /* DateConvert.swift */,
-				6E4566E524729E81001C8D8C /* NetworkService.swift */,
-				6E4566E72472A12B001C8D8C /* NetworkDataFetcher.swift */,
-				6E4566E92472A611001C8D8C /* DataFetcherService.swift */,
+				CEAF90E32650428800FD0D9B /* Networking */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -139,8 +136,8 @@
 			children = (
 				6E4884322461F12800ABD705 /* AppDelegate.swift */,
 				6E4884342461F12800ABD705 /* SceneDelegate.swift */,
-				6E4566D924728211001C8D8C /* Model */,
 				6E4884362461F12800ABD705 /* ViewController.swift */,
+				6E4566D924728211001C8D8C /* Model */,
 				CE276D88247D098B009E09D7 /* Utils */,
 				CEA0FE852473D2E900B8D191 /* Presentation */,
 				6E4884382461F12800ABD705 /* Main.storyboard */,
@@ -162,6 +159,7 @@
 		CE276D88247D098B009E09D7 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				6E4566F02472B7F4001C8D8C /* DateConvert.swift */,
 				CE276D89247D09A6009E09D7 /* Date+TIme.swift */,
 			);
 			path = Utils;
@@ -210,6 +208,16 @@
 				CEA0FE8A2473D39000B8D191 /* TradingPairListModel.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		CEAF90E32650428800FD0D9B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				6E4566E524729E81001C8D8C /* NetworkService.swift */,
+				6E4566E72472A12B001C8D8C /* NetworkDataFetcher.swift */,
+				6E4566E92472A611001C8D8C /* DataFetcherService.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

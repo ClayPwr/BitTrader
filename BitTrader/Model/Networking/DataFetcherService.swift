@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-class DataFetcherService{
+class DataFetcherService {
     let transactions = "https://www.bitstamp.net/api/v2/transactions/"
     let orderBookUrl = "https://www.bitstamp.net/api/order_book/"
     let tradingPairInfo = "https://www.bitstamp.net/api/v2/trading-pairs-info/"
@@ -22,7 +22,7 @@ class DataFetcherService{
     
     let networkDataFetcher = NetworkDataFetcher()
     
-    //надо что-то сделать с массивом
+    
     func fetchTransactions(partOfUrl: String, completion: @escaping ([BSTransactionsHistory]?)-> Void){
         
         let validUrl = transactions.appending(partOfUrl) + "/"

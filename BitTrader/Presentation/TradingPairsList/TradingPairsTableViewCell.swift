@@ -33,7 +33,7 @@ class TradingPairsTableViewCell: UITableViewCell, TradingPairListModelDelegate {
         pair.theClosure = { transactions in
             var transactionsValues = [ChartDataEntry]()
             for transaction in transactions.reversed() {
-                if let date = Double(transaction.date), let price = Double(transaction.price){
+                if let date = Double(transaction.date), let price = Double(transaction.price) {
                     let value = ChartDataEntry(x: date, y: price)
                     transactionsValues.append(value)
 
@@ -58,13 +58,11 @@ class TradingPairsTableViewCell: UITableViewCell, TradingPairListModelDelegate {
     }
     
     func didUpdateTransactionsHistory(_ history: [ChartDataEntry]) {
-          //
-        //impl
         self.setData(history)
     }
 }
 
-extension TradingPairsTableViewCell{
+extension TradingPairsTableViewCell {
     
    private func setData(_ transactionData: [ChartDataEntry]) {
         customizelineChartView()

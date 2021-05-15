@@ -8,14 +8,13 @@
 
 import Foundation
 
-class BitstampExchangeProvider: ExchangeProvider{
+class BitstampExchangeProvider: ExchangeProvider {
 
     
     let dataFetcher = DataFetcherService()
     
     func getTradingPairs(completion: @escaping ([BSTradingPair]?, Error?) -> (Void)) {
         dataFetcher.tradePairInfo { (pairs) in
-            //нужны ли такие двойные проверки? такаяже проверка в контролере
             if let pairses = pairs {
                 completion(pairses, nil)
             }else{

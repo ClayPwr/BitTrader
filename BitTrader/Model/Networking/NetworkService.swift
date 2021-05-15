@@ -18,7 +18,7 @@ class NetworkService {
             .responseJSON(completionHandler: completion)
     }
     
-    func requestWithParams(urlString: String, completion: @escaping (AFDataResponse<Any>)-> Void){
+    func requestWithParams(urlString: String, completion: @escaping (AFDataResponse<Any>)-> Void) {
         
         let urlParams = [
                    "group":"2",
