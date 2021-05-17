@@ -44,7 +44,7 @@ class DetailViewController: UIViewController {
             
             let data = filtered.reversed().compactMap { transaction -> ChartDataEntry? in
                 if let timestamp = Double(transaction.date), let price = Double(transaction.price) {
-                    return ChartDataEntry(x: timestamp.getMin(), y: price)
+                    return ChartDataEntry(x: timestamp, y: price)
                 }
                 return nil
             }

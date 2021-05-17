@@ -33,7 +33,40 @@
 		CEA0FE842473D14D00B8D191 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0FE832473D14D00B8D191 /* Services.swift */; };
 		CEA0FE882473D31A00B8D191 /* TradingPairsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0FE872473D31A00B8D191 /* TradingPairsListController.swift */; };
 		CEA0FE8B2473D39000B8D191 /* TradingPairListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0FE8A2473D39000B8D191 /* TradingPairListModel.swift */; };
+		CEAF90F626511C3B00FD0D9B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEAF90F526511C3B00FD0D9B /* WidgetKit.framework */; };
+		CEAF90F826511C3B00FD0D9B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEAF90F726511C3B00FD0D9B /* SwiftUI.framework */; };
+		CEAF90FB26511C3B00FD0D9B /* BitTraderWidgetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF90FA26511C3B00FD0D9B /* BitTraderWidgetExtension.swift */; };
+		CEAF90FD26511C3C00FD0D9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEAF90FC26511C3C00FD0D9B /* Assets.xcassets */; };
+		CEAF910126511C3C00FD0D9B /* BitTraderWidgetExtensionExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CEAF90F426511C3B00FD0D9B /* BitTraderWidgetExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CEAF910926511ED400FD0D9B /* BitTraderWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF910826511ED400FD0D9B /* BitTraderWidgets.swift */; };
+		CEAF910F2651200400FD0D9B /* CryptocurrencyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF910E2651200400FD0D9B /* CryptocurrencyWidget.swift */; };
+		CEAF91132651500F00FD0D9B /* PairTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF91122651500F00FD0D9B /* PairTransaction.swift */; };
+		CEAF91162651503700FD0D9B /* BSTradingPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4566EB2472A9A8001C8D8C /* BSTradingPair.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CEAF90FF26511C3C00FD0D9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E4884272461F12800ABD705 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEAF90F326511C3B00FD0D9B;
+			remoteInfo = BitTraderWidgetExtensionExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CEAF910526511C3C00FD0D9B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CEAF910126511C3C00FD0D9B /* BitTraderWidgetExtensionExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		43A8014364B7587EBC1476A3 /* Pods_BitTrader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitTrader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +99,15 @@
 		CEA0FE832473D14D00B8D191 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		CEA0FE872473D31A00B8D191 /* TradingPairsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingPairsListController.swift; sourceTree = "<group>"; };
 		CEA0FE8A2473D39000B8D191 /* TradingPairListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingPairListModel.swift; sourceTree = "<group>"; };
+		CEAF90F426511C3B00FD0D9B /* BitTraderWidgetExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BitTraderWidgetExtensionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEAF90F526511C3B00FD0D9B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		CEAF90F726511C3B00FD0D9B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		CEAF90FA26511C3B00FD0D9B /* BitTraderWidgetExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitTraderWidgetExtension.swift; sourceTree = "<group>"; };
+		CEAF90FC26511C3C00FD0D9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEAF90FE26511C3C00FD0D9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEAF910826511ED400FD0D9B /* BitTraderWidgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitTraderWidgets.swift; sourceTree = "<group>"; };
+		CEAF910E2651200400FD0D9B /* CryptocurrencyWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptocurrencyWidget.swift; sourceTree = "<group>"; };
+		CEAF91122651500F00FD0D9B /* PairTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairTransaction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +116,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F1EC0A15F5C24E635D322A2 /* Pods_BitTrader.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEAF90F126511C3B00FD0D9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEAF90F826511C3B00FD0D9B /* SwiftUI.framework in Frameworks */,
+				CEAF90F626511C3B00FD0D9B /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				6E4884312461F12800ABD705 /* BitTrader */,
+				CEAF90F926511C3B00FD0D9B /* BitTraderWidgetExtension */,
 				6E4884302461F12800ABD705 /* Products */,
 				4F9A344891AF94B35AA85480 /* Pods */,
 				77CF04FC8BD8EE8AEBD76439 /* Frameworks */,
@@ -127,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				6E48842F2461F12800ABD705 /* BitTrader.app */,
+				CEAF90F426511C3B00FD0D9B /* BitTraderWidgetExtensionExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,6 +205,8 @@
 			isa = PBXGroup;
 			children = (
 				43A8014364B7587EBC1476A3 /* Pods_BitTrader.framework */,
+				CEAF90F526511C3B00FD0D9B /* WidgetKit.framework */,
+				CEAF90F726511C3B00FD0D9B /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -220,6 +275,19 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		CEAF90F926511C3B00FD0D9B /* BitTraderWidgetExtension */ = {
+			isa = PBXGroup;
+			children = (
+				CEAF90FA26511C3B00FD0D9B /* BitTraderWidgetExtension.swift */,
+				CEAF91122651500F00FD0D9B /* PairTransaction.swift */,
+				CEAF910826511ED400FD0D9B /* BitTraderWidgets.swift */,
+				CEAF910E2651200400FD0D9B /* CryptocurrencyWidget.swift */,
+				CEAF90FC26511C3C00FD0D9B /* Assets.xcassets */,
+				CEAF90FE26511C3C00FD0D9B /* Info.plist */,
+			);
+			path = BitTraderWidgetExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -232,15 +300,34 @@
 				6E48842C2461F12800ABD705 /* Frameworks */,
 				6E48842D2461F12800ABD705 /* Resources */,
 				CC33B2C6D12AD1FDBF644A2F /* [CP] Embed Pods Frameworks */,
+				CEAF910526511C3C00FD0D9B /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CEAF910026511C3C00FD0D9B /* PBXTargetDependency */,
 			);
 			name = BitTrader;
 			productName = BitTrader;
 			productReference = 6E48842F2461F12800ABD705 /* BitTrader.app */;
 			productType = "com.apple.product-type.application";
+		};
+		CEAF90F326511C3B00FD0D9B /* BitTraderWidgetExtensionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEAF910226511C3C00FD0D9B /* Build configuration list for PBXNativeTarget "BitTraderWidgetExtensionExtension" */;
+			buildPhases = (
+				CEAF90F026511C3B00FD0D9B /* Sources */,
+				CEAF90F126511C3B00FD0D9B /* Frameworks */,
+				CEAF90F226511C3B00FD0D9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BitTraderWidgetExtensionExtension;
+			productName = BitTraderWidgetExtensionExtension;
+			productReference = CEAF90F426511C3B00FD0D9B /* BitTraderWidgetExtensionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -248,12 +335,15 @@
 		6E4884272461F12800ABD705 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Tarabanov Igor";
 				TargetAttributes = {
 					6E48842E2461F12800ABD705 = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					CEAF90F326511C3B00FD0D9B = {
+						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
@@ -271,6 +361,7 @@
 			projectRoot = "";
 			targets = (
 				6E48842E2461F12800ABD705 /* BitTrader */,
+				CEAF90F326511C3B00FD0D9B /* BitTraderWidgetExtensionExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -283,6 +374,14 @@
 				6E48843F2461F13000ABD705 /* LaunchScreen.storyboard in Resources */,
 				6E48843C2461F13000ABD705 /* Assets.xcassets in Resources */,
 				6E48843A2461F12800ABD705 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEAF90F226511C3B00FD0D9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEAF90FD26511C3C00FD0D9B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,7 +459,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CEAF90F026511C3B00FD0D9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEAF90FB26511C3B00FD0D9B /* BitTraderWidgetExtension.swift in Sources */,
+				CEAF910F2651200400FD0D9B /* CryptocurrencyWidget.swift in Sources */,
+				CEAF91132651500F00FD0D9B /* PairTransaction.swift in Sources */,
+				CEAF91162651503700FD0D9B /* BSTradingPair.swift in Sources */,
+				CEAF910926511ED400FD0D9B /* BitTraderWidgets.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CEAF910026511C3C00FD0D9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEAF90F326511C3B00FD0D9B /* BitTraderWidgetExtensionExtension */;
+			targetProxy = CEAF90FF26511C3C00FD0D9B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6E4884382461F12800ABD705 /* Main.storyboard */ = {
@@ -500,9 +619,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C9B4977E118D4B789D244AB2 /* Pods-BitTrader.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BitTrader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -518,15 +639,61 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 65A41C62961F0AC97BDCB8A6 /* Pods-BitTrader.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BitTrader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tarabanovigor.BitTrader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CEAF910326511C3C00FD0D9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BitTraderWidgetExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tarabanovigor.BitTrader.BitTraderWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEAF910426511C3C00FD0D9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BitTraderWidgetExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tarabanovigor.BitTrader.BitTraderWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -549,6 +716,15 @@
 			buildConfigurations = (
 				6E4884442461F13000ABD705 /* Debug */,
 				6E4884452461F13000ABD705 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEAF910226511C3C00FD0D9B /* Build configuration list for PBXNativeTarget "BitTraderWidgetExtensionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEAF910326511C3C00FD0D9B /* Debug */,
+				CEAF910426511C3C00FD0D9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
