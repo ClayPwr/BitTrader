@@ -9,6 +9,12 @@
 import WidgetKit
 import SwiftUI
 
+struct PairCryptocurrencyEntry: TimelineEntry {
+    let date: Date
+//    let list: [PairTransactionItem]
+    var list: [PairCostItem]
+}
+
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date())
@@ -55,7 +61,7 @@ struct BitTraderWidgetExtension: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             BitTraderWidgetExtensionEntryView(entry: entry)
         }
-        .configurationDisplayName("BitTrader ")
+        .configurationDisplayName("BitTrader")
         .description("Price and quotes throughout the day")
         .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
     }

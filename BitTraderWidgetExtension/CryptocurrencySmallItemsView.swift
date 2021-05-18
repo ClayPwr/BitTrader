@@ -7,15 +7,27 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct CryptocurrencySmallItemsView: View {
+    var list: [PairCostItem]
+    var visibleItems: Int
+    
+    @ViewBuilder
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading, spacing: 10) {
+            ForEach(list.prefix(visibleItems), id: \.self) { model in
+                CryptocurrencySmallRow(model: model)
+            }
+        }
+        .padding(.leading, 10)
+        .padding(.trailing, 10)
     }
 }
 
 struct CryptocurrencySmallItemsView_Previews: PreviewProvider {
     static var previews: some View {
-        CryptocurrencySmallItemsView()
+        CryptocurrencySmallItemsView(list: PairCostItem.getMockPairCostItems(), visibleItems: 3)
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
