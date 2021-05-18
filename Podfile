@@ -8,3 +8,11 @@ target 'BitTrader' do
   pod 'Alamofire'
   pod 'Charts'
 end
+
+target "BitTraderWidgetExtensionExtension" do
+  platform :ios, '14.0'
+  use_frameworks!
+  
+  pod 'Alamofire'
+  pod 'Charts'
+end
