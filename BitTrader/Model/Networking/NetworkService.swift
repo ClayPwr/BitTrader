@@ -21,11 +21,12 @@ class NetworkService {
     func requestWithParams(urlString: String, completion: @escaping (AFDataResponse<Any>)-> Void) {
         
         let urlParams = [
-                   "group":"2",
+                   "step":"14400",
+                   "limit":"50",
                ]
         
-        AF.request(urlString, method: .get, parameters: urlParams, headers: nil)
+        AF.request(urlString, method: .get, parameters: urlParams, headers: .default)
             .validate(statusCode: 200..<300)
-        .responseJSON(completionHandler: completion)
+            .responseJSON(completionHandler: completion)
     }
 }

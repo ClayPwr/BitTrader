@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e35-7I-Y92">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e35-7I-Y92">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -127,14 +128,14 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Xn3-mc-k6U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9OZ-fH-8zL"/>
                             <constraint firstAttribute="bottom" secondItem="Xn3-mc-k6U" secondAttribute="bottom" id="Cw6-1g-Ghy"/>
                             <constraint firstItem="Xn3-mc-k6U" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LdH-fe-abv"/>
                             <constraint firstItem="Xn3-mc-k6U" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yTt-xg-WEs"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="BitTrader" id="Rsj-iZ-y9Y"/>
                     <connections>
@@ -156,13 +157,14 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3gN-IB-dCx" customClass="LineChartView" customModule="Charts">
                                 <rect key="frame" x="0.0" y="144" width="414" height="752"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="TBv-LZ-yq4">
                                 <rect key="frame" x="197" y="438" width="20" height="20"/>
                                 <color key="color" red="0.95258962560000005" green="0.95258962560000005" blue="0.95258962560000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6KW-RO-lPb"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="TBv-LZ-yq4" firstAttribute="centerY" secondItem="6KW-RO-lPb" secondAttribute="centerY" id="4Ff-fG-b6Z"/>
@@ -172,7 +174,6 @@
                             <constraint firstItem="3gN-IB-dCx" firstAttribute="trailing" secondItem="6KW-RO-lPb" secondAttribute="trailing" id="iA6-jY-vXU"/>
                             <constraint firstAttribute="bottom" secondItem="3gN-IB-dCx" secondAttribute="bottom" id="shX-hd-gRO"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6KW-RO-lPb"/>
                     </view>
                     <navigationItem key="navigationItem" id="2yf-Ty-THT"/>
                     <connections>
@@ -203,4 +204,9 @@
             <point key="canvasLocation" x="137.68115942028987" y="106.47321428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -48,4 +48,15 @@ class BitstampExchangeProvider: ExchangeProvider {
             }
         }
     }
+    
+    func getCryptoCurrencyCost(completion: @escaping (CryptoCurrencyCost?, Error?) -> Void) {
+        dataFetcher.cryptoCurrencyCost { currency in
+            if let currency = currency {
+                completion(currency, nil)
+            } else {
+                print("BitstampExchangeProvider got nil at getCryptoCurrencyCost")
+                completion(nil, nil)
+            }
+        }
+    }
 }

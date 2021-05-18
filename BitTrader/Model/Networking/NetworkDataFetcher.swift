@@ -25,6 +25,21 @@ class NetworkDataFetcher {
         }
     }
     
+    func fetchGenericJSONDataParams<T: Decodable>(urlString: String, responseDecoded: @escaping (T?) -> Void) {
+        networkService.requestWithParams(urlString: urlString) { (response) in
+            
+            if let data = response.data {
+               let decode = self.decodeJSON(type: T.self, from: data)
+                responseDecoded(decode)
+            }else {
+                debugPrint("HTTP Request failed: \(String(describing: response.error))")
+                responseDecoded(nil)
+            }
+        }
+    }
+    
+    
+    
    private func decodeJSON<T: Decodable>(type: T.Type, from: Data?)-> T? {
         let decoder = JSONDecoder()
         guard let data = from else { return nil}

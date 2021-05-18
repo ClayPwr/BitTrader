@@ -16,6 +16,7 @@ class DataFetcherService {
     let conversionRate = "https://www.bitstamp.net/api/eur_usd/"
     let hourlyUrlString = "https://www.bitstamp.net/api/ticker_hour/"
     let tickerUrl = "https://www.bitstamp.net/api/v2/ticker/"
+    let cryptocurrencyCost = "https://www.bitstamp.net/api/v2/ohlc/btceur/"
     
     
     //var partOfUrl = "btceur"
@@ -52,4 +53,9 @@ class DataFetcherService {
 
         networkDataFetcher.fetchGenericJSONData(urlString: validUrl, responseDecoded: completion)
     }
+    
+    func cryptoCurrencyCost(completion: @escaping (CryptoCurrencyCost?) -> Void) {
+        networkDataFetcher.fetchGenericJSONDataParams(urlString: cryptocurrencyCost, responseDecoded: completion)
+    }
+    
 }

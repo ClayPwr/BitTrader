@@ -11,6 +11,7 @@ import Foundation
 typealias BSTradingPairResult = ([BSTradingPair]?, Error?) -> (Void)
 typealias BSTickerResult = (BSTicker?, Error?) -> (Void)
 typealias BSTransactionResult = ([BSTransactionsHistory]?, Error?) -> Void
+typealias BSCryptoCurrencyResult = (CryptoCurrencyCost?, Error?) -> Void
 
 
 protocol ExchangeProvider {
@@ -23,4 +24,7 @@ protocol ExchangeProvider {
     
     // Transactions:
     func getTransactions(for pair: BSTradingPair, completion: @escaping BSTransactionResult) -> Void
+    
+    //Cost cryptocurrency
+    func getCryptoCurrencyCost(completion: @escaping BSCryptoCurrencyResult)
 }
