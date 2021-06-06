@@ -28,6 +28,6 @@ struct CryptocurrencyView: View {
 struct CryptocurrencyView_Previews: PreviewProvider {
     static var previews: some View {
         CryptocurrencyView(entry: PairCryptocurrencyEntry(date: Date(), list: PairCostItem.getMockPairCostItems()))
-        .previewContext(WidgetPreviewContext(family: .systemSmall))
+        .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
 }

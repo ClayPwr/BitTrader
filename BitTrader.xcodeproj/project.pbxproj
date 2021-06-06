@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -35,6 +35,8 @@
 		CE9F5A4626542E4D00922160 /* CryptocurrencyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F5A4526542E4D00922160 /* CryptocurrencyListView.swift */; };
 		CE9F5A4C2654375300922160 /* CryptocurrencySmallItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F5A4B2654375300922160 /* CryptocurrencySmallItemsView.swift */; };
 		CE9F5A5026543C4C00922160 /* CryptocurrencySmallRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F5A4F26543C4C00922160 /* CryptocurrencySmallRow.swift */; };
+		CE9F5BE52656999A00922160 /* CryptocurrencyItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F5BE42656999A00922160 /* CryptocurrencyItemsView.swift */; };
+		CE9F5BE9265699DA00922160 /* CryptocurrencyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F5BE8265699DA00922160 /* CryptocurrencyRow.swift */; };
 		CEA0FE7C2473CCF300B8D191 /* BSExchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0FE7B2473CCF300B8D191 /* BSExchange.swift */; };
 		CEA0FE7F2473CF2800B8D191 /* ExchangeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0FE7E2473CF2800B8D191 /* ExchangeProvider.swift */; };
 		CEA0FE822473D0A900B8D191 /* BitstampExchangeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0FE812473D0A900B8D191 /* BitstampExchangeProvider.swift */; };
@@ -59,10 +61,11 @@
 		CEAF90FB26511C3B00FD0D9B /* BitTraderWidgetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF90FA26511C3B00FD0D9B /* BitTraderWidgetExtension.swift */; };
 		CEAF90FD26511C3C00FD0D9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEAF90FC26511C3C00FD0D9B /* Assets.xcassets */; };
 		CEAF910126511C3C00FD0D9B /* BitTraderWidgetExtensionExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CEAF90F426511C3B00FD0D9B /* BitTraderWidgetExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		CEAF910926511ED400FD0D9B /* BitTraderWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF910826511ED400FD0D9B /* BitTraderWidgets.swift */; };
 		CEAF910F2651200400FD0D9B /* CryptocurrencyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF910E2651200400FD0D9B /* CryptocurrencyWidget.swift */; };
 		CEAF91132651500F00FD0D9B /* PairTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF91122651500F00FD0D9B /* PairTransaction.swift */; };
 		CEAF91162651503700FD0D9B /* BSTradingPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4566EB2472A9A8001C8D8C /* BSTradingPair.swift */; };
+		CED19EA2265BD04900B34748 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = CED19EA1265BD04900B34748 /* SwiftUICharts */; };
+		CED19EA6265BD05F00B34748 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = CED19EA5265BD05F00B34748 /* SwiftUICharts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +125,8 @@
 		CE9F5A4526542E4D00922160 /* CryptocurrencyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptocurrencyListView.swift; sourceTree = "<group>"; };
 		CE9F5A4B2654375300922160 /* CryptocurrencySmallItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptocurrencySmallItemsView.swift; sourceTree = "<group>"; };
 		CE9F5A4F26543C4C00922160 /* CryptocurrencySmallRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptocurrencySmallRow.swift; sourceTree = "<group>"; };
+		CE9F5BE42656999A00922160 /* CryptocurrencyItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptocurrencyItemsView.swift; sourceTree = "<group>"; };
+		CE9F5BE8265699DA00922160 /* CryptocurrencyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptocurrencyRow.swift; sourceTree = "<group>"; };
 		CEA0FE7B2473CCF300B8D191 /* BSExchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSExchange.swift; sourceTree = "<group>"; };
 		CEA0FE7E2473CF2800B8D191 /* ExchangeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeProvider.swift; sourceTree = "<group>"; };
 		CEA0FE812473D0A900B8D191 /* BitstampExchangeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitstampExchangeProvider.swift; sourceTree = "<group>"; };
@@ -134,7 +139,6 @@
 		CEAF90FA26511C3B00FD0D9B /* BitTraderWidgetExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitTraderWidgetExtension.swift; sourceTree = "<group>"; };
 		CEAF90FC26511C3C00FD0D9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEAF90FE26511C3C00FD0D9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEAF910826511ED400FD0D9B /* BitTraderWidgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitTraderWidgets.swift; sourceTree = "<group>"; };
 		CEAF910E2651200400FD0D9B /* CryptocurrencyWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptocurrencyWidget.swift; sourceTree = "<group>"; };
 		CEAF91122651500F00FD0D9B /* PairTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairTransaction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F1EC0A15F5C24E635D322A2 /* Pods_BitTrader.framework in Frameworks */,
+				CED19EA2265BD04900B34748 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEAF90F826511C3B00FD0D9B /* SwiftUI.framework in Frameworks */,
+				CED19EA6265BD05F00B34748 /* SwiftUICharts in Frameworks */,
 				CEAF90F626511C3B00FD0D9B /* WidgetKit.framework in Frameworks */,
 				082E57436917D7A1CD7BFA92 /* Pods_BitTraderWidgetExtensionExtension.framework in Frameworks */,
 			);
@@ -314,10 +320,11 @@
 			children = (
 				CEAF90FA26511C3B00FD0D9B /* BitTraderWidgetExtension.swift */,
 				CEAF91122651500F00FD0D9B /* PairTransaction.swift */,
-				CEAF910826511ED400FD0D9B /* BitTraderWidgets.swift */,
 				CEAF910E2651200400FD0D9B /* CryptocurrencyWidget.swift */,
 				CE68ADDE265293060009786F /* CryptocurrencyView.swift */,
 				CE9F5A4526542E4D00922160 /* CryptocurrencyListView.swift */,
+				CE9F5BE42656999A00922160 /* CryptocurrencyItemsView.swift */,
+				CE9F5BE8265699DA00922160 /* CryptocurrencyRow.swift */,
 				CE9F5A4B2654375300922160 /* CryptocurrencySmallItemsView.swift */,
 				CE9F5A4F26543C4C00922160 /* CryptocurrencySmallRow.swift */,
 				CEAF90FC26511C3C00FD0D9B /* Assets.xcassets */,
@@ -346,6 +353,9 @@
 				CEAF910026511C3C00FD0D9B /* PBXTargetDependency */,
 			);
 			name = BitTrader;
+			packageProductDependencies = (
+				CED19EA1265BD04900B34748 /* SwiftUICharts */,
+			);
 			productName = BitTrader;
 			productReference = 6E48842F2461F12800ABD705 /* BitTrader.app */;
 			productType = "com.apple.product-type.application";
@@ -364,6 +374,9 @@
 			dependencies = (
 			);
 			name = BitTraderWidgetExtensionExtension;
+			packageProductDependencies = (
+				CED19EA5265BD05F00B34748 /* SwiftUICharts */,
+			);
 			productName = BitTraderWidgetExtensionExtension;
 			productReference = CEAF90F426511C3B00FD0D9B /* BitTraderWidgetExtensionExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -395,6 +408,9 @@
 				Base,
 			);
 			mainGroup = 6E4884262461F12800ABD705;
+			packageReferences = (
+				CED19EA0265BD04800B34748 /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = 6E4884302461F12800ABD705 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -535,6 +551,7 @@
 				CEA60D8426524FE200DC0B44 /* DateConvert.swift in Sources */,
 				CEA60DB42652549300DC0B44 /* BSTickerHourly.swift in Sources */,
 				CEAF90FB26511C3B00FD0D9B /* BitTraderWidgetExtension.swift in Sources */,
+				CE9F5BE52656999A00922160 /* CryptocurrencyItemsView.swift in Sources */,
 				CEA60D8A26524FF600DC0B44 /* ExchangeProvider.swift in Sources */,
 				CEA60D8126524F9C00DC0B44 /* Services.swift in Sources */,
 				CE9F5A4C2654375300922160 /* CryptocurrencySmallItemsView.swift in Sources */,
@@ -542,12 +559,12 @@
 				CEA60DAE2652547D00DC0B44 /* BSOrderBook.swift in Sources */,
 				CEA60D8726524FEA00DC0B44 /* BitstampExchangeProvider.swift in Sources */,
 				CEA60D8D2652500B00DC0B44 /* DataFetcherService.swift in Sources */,
+				CE9F5BE9265699DA00922160 /* CryptocurrencyRow.swift in Sources */,
 				CEA60DAB2652546A00DC0B44 /* NetworkService.swift in Sources */,
 				CEAF910F2651200400FD0D9B /* CryptocurrencyWidget.swift in Sources */,
 				CE9F5A5026543C4C00922160 /* CryptocurrencySmallRow.swift in Sources */,
 				CEAF91132651500F00FD0D9B /* PairTransaction.swift in Sources */,
 				CEAF91162651503700FD0D9B /* BSTradingPair.swift in Sources */,
-				CEAF910926511ED400FD0D9B /* BitTraderWidgets.swift in Sources */,
 				CEA60DB12652548800DC0B44 /* ConversionRateEurUsd.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -703,6 +720,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4PR4N2FLE7;
 				INFOPLIST_FILE = BitTrader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -723,6 +741,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4PR4N2FLE7;
 				INFOPLIST_FILE = BitTrader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -744,6 +763,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4PR4N2FLE7;
 				INFOPLIST_FILE = BitTraderWidgetExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -767,6 +787,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4PR4N2FLE7;
 				INFOPLIST_FILE = BitTraderWidgetExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -813,6 +834,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CED19EA0265BD04800B34748 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = exactVersion;
+				version = "2.0.0-beta.1";
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CED19EA1265BD04900B34748 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CED19EA0265BD04800B34748 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+		CED19EA5265BD05F00B34748 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CED19EA0265BD04800B34748 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6E4884272461F12800ABD705 /* Project object */;
 }

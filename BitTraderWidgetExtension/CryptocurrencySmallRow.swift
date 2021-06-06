@@ -16,19 +16,19 @@ struct CryptocurrencySmallRow: View {
         HStack {
             VStack(alignment: .leading) {
                 Text(model.pair.name)
+                    .font(.custom("SF Pro Display", size: 16))
                     .foregroundColor(.white)
-                    .font(.system(size: 16))
                 Text(model.pair.description)
                     .foregroundColor(.gray)
                     .font(.system(size: 10))
             }
             Spacer()
             VStack {
-                Text("\(55140)")
+                Text(model.getPrice)
                     .foregroundColor(.white)
                     .font(.system(size: 14))
-                Text("\(-3294)")
-                    .foregroundColor(.red)
+                Text(model.getDifferenceInPrice)
+                    .foregroundColor(model.getMovePrice ? .green : .red)
                     .font(.system(size: 14))
             }
         }.background(Color.black)

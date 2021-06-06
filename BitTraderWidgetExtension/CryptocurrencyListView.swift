@@ -21,11 +21,11 @@ struct CryptocurrencyListView: View {
             case .systemSmall:
                 CryptocurrencySmallItemsView(list: list, visibleItems: 3)
             case .systemMedium:
-                Text("fds")
+                CryptocurrencyItemsView(list: list, visibleItems: 3)
             case .systemLarge:
-                Text("fds")
+                CryptocurrencyItemsView(list: list, visibleItems: 6)
             default:
-                Text("fds")
+                CryptocurrencySmallItemsView(list: list, visibleItems: 3)
             }
         }
     }
@@ -34,6 +34,6 @@ struct CryptocurrencyListView: View {
 struct CryptocurrencyListView_Previews: PreviewProvider {
     static var previews: some View {
         CryptocurrencyListView(list: PairCostItem.getMockPairCostItems())
-        .previewContext(WidgetPreviewContext(family: .systemSmall))
+        .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
 }
