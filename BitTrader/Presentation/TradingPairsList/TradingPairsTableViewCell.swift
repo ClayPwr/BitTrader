@@ -41,6 +41,7 @@ class TradingPairsTableViewCell: UITableViewCell, TradingPairListModelDelegate {
             }
             self.setData(transactionsValues)
         }
+        model.getTransactionData(pairList: model)
         
     }
     
