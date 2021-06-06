@@ -305,6 +305,43 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		CEA38519266D676500E7CA92 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEAF91122651500F00FD0D9B /* PairTransaction.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CEA3851C266D678200E7CA92 /* CurrencyView */ = {
+			isa = PBXGroup;
+			children = (
+				CE68ADDE265293060009786F /* CryptocurrencyView.swift */,
+				CE9F5A4526542E4D00922160 /* CryptocurrencyListView.swift */,
+				CEA3851D266D67A800E7CA92 /* MediumLargeViews */,
+				CEA38520266D67BC00E7CA92 /* SmallViews */,
+			);
+			path = CurrencyView;
+			sourceTree = "<group>";
+		};
+		CEA3851D266D67A800E7CA92 /* MediumLargeViews */ = {
+			isa = PBXGroup;
+			children = (
+				CE9F5BE42656999A00922160 /* CryptocurrencyItemsView.swift */,
+				CE9F5BE8265699DA00922160 /* CryptocurrencyRow.swift */,
+			);
+			path = MediumLargeViews;
+			sourceTree = "<group>";
+		};
+		CEA38520266D67BC00E7CA92 /* SmallViews */ = {
+			isa = PBXGroup;
+			children = (
+				CE9F5A4B2654375300922160 /* CryptocurrencySmallItemsView.swift */,
+				CE9F5A4F26543C4C00922160 /* CryptocurrencySmallRow.swift */,
+			);
+			path = SmallViews;
+			sourceTree = "<group>";
+		};
 		CEAF90E32650428800FD0D9B /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,14 +356,9 @@
 			isa = PBXGroup;
 			children = (
 				CEAF90FA26511C3B00FD0D9B /* BitTraderWidgetExtension.swift */,
-				CEAF91122651500F00FD0D9B /* PairTransaction.swift */,
 				CEAF910E2651200400FD0D9B /* CryptocurrencyWidget.swift */,
-				CE68ADDE265293060009786F /* CryptocurrencyView.swift */,
-				CE9F5A4526542E4D00922160 /* CryptocurrencyListView.swift */,
-				CE9F5BE42656999A00922160 /* CryptocurrencyItemsView.swift */,
-				CE9F5BE8265699DA00922160 /* CryptocurrencyRow.swift */,
-				CE9F5A4B2654375300922160 /* CryptocurrencySmallItemsView.swift */,
-				CE9F5A4F26543C4C00922160 /* CryptocurrencySmallRow.swift */,
+				CEA38519266D676500E7CA92 /* Models */,
+				CEA3851C266D678200E7CA92 /* CurrencyView */,
 				CEAF90FC26511C3C00FD0D9B /* Assets.xcassets */,
 				CEAF90FE26511C3C00FD0D9B /* Info.plist */,
 			);
