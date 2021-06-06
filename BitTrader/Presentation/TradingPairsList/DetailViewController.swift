@@ -51,6 +51,12 @@ class DetailViewController: UIViewController {
             self.transactionData = data
             self.setData()
         }
+        
+        bitstampProvider.getCryptoCurrencyCost(for: pair) { (currency, error) in
+            if let currency = currency {
+                print("currency: \(currency)")
+            }
+        }
     }
 
     

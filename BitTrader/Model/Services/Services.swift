@@ -20,4 +20,19 @@ class Services {
     }
     
     static let all = Services()
+    
+    func getTradingPairListModelItems(closure: @escaping ([TradingPairListModel]?)->()) {
+        let group = DispatchGroup()
+        var list: [TradingPairListModel]?
+        group.enter()
+        bitstampExchangeProvider.getTradingPairs { (pairs, error) -> (Void) in
+            guard let pairs = pairs else { return }
+            list = pairs.map({ TradingPairListModel(pair: $0, exchangeProvider: self.bitstampExchangeProvider) })
+            group.leave()
+        }
+        
+        group.notify(queue: .global()) {
+            closure(list)
+        }
+    }
 }

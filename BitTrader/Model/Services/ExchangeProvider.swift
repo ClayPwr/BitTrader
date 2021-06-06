@@ -26,5 +26,5 @@ protocol ExchangeProvider {
     func getTransactions(for pair: BSTradingPair, completion: @escaping BSTransactionResult) -> Void
     
     //Cost cryptocurrency
-    func getCryptoCurrencyCost(completion: @escaping BSCryptoCurrencyResult)
+    func getCryptoCurrencyCost(for pair: BSTradingPair, completion: @escaping BSCryptoCurrencyResult)
 }

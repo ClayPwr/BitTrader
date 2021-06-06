@@ -21,8 +21,8 @@ class NetworkService {
     func requestWithParams(urlString: String, completion: @escaping (AFDataResponse<Any>)-> Void) {
         
         let urlParams = [
-                   "step":"14400",
-                   "limit":"50",
+                   "step":"86400",
+                   "limit":"15",
                ]
         
         AF.request(urlString, method: .get, parameters: urlParams, headers: .default)
